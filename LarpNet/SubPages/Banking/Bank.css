@@ -1,0 +1,21 @@
+#main {
+    font-family: 'Trebuchet MS'
+}
+
+#HistoryContainer {
+    margin-bottom: 30px;
+}
+
+#History {
+    height: 100px;
+    width: 350px;
+    border-style: solid;
+    padding: 10px;
+}
+
+#SendMoney {
+    height: 100px;
+    width: 350px;
+    border-style: solid;
+    padding: 10px;
+}
