@@ -3,6 +3,7 @@
   font-family: eli;
 }
 #center {
+    font-size: 30px;
     text-align: center;
     position: relative;
     top: 50%;
@@ -25,3 +26,15 @@ label{
   color: white;
 }
 
+#SubmitButton {
+  background-color: #45A29E; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 300px;
+}
