@@ -2,7 +2,7 @@
 
 
 
-header('Location: /LoginPage/login.html');
+header('Location: /LoginPage/login.php');
 
 
 ?>

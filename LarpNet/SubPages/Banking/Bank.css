@@ -1,5 +1,23 @@
-#main {
-    font-family: 'Trebuchet MS'
+@font-face{
+    src: url(../../LoginPage/Elixia.ttf);
+    font-family: eli;
+  }
+
+body {
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    overflow: hidden;
+    color: white;
+  }
+
+#Title {
+    font-family: eli;
+    text-decoration: underline;
+    text-underline-offset: 10px;
 }
 
 #HistoryContainer {
@@ -33,4 +51,19 @@
 #Credits {
     font-size: 20px;
     margin: 10px;
+}
+
+
+.button {
+    font-family: 'Trebuchet MS';
+    background-color: #45A29E; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
 }

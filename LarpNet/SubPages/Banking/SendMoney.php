@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['Username'])) {
     
 } else {
-    header('Location: ../../LoginPage/login.html');
+    header('Location: ../../LoginPage/login.php');
 }
 
 ini_set('display_errors', 1);

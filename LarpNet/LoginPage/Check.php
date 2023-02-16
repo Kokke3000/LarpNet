@@ -25,18 +25,21 @@ if ($conn->connect_error) {
 
             //Check if the user with the given password and username are the same one
             if($rows_in_usernames == $rows_in_passwords) {
-                $_SESSION['InvalidLogin'] = false;
+                $_SESSION['InvalidLogin'] = 0;
                 $_SESSION['Username'] = $user;
                 header('Location: ../MainPage/main.php');
             } else {
-                header('Location: login.html');
+                $_SESSION['InvalidLogin'] = 1;
+                header('Location: login.php');
             }
 
         } else {
-            header('Location: login.html');
+            $_SESSION['InvalidLogin'] = 1;
+            header('Location: login.php');
         }
     } else {
-        header('Location: login.html');
+        $_SESSION['InvalidLogin'] = 1;
+        header('Location: login.php');
     }
 
 

@@ -23,10 +23,12 @@ h1{
   color: white;
 }
 label{
+  font-family: 'Trebuchet MS';
   color: white;
 }
 
 #SubmitButton {
+  font-family: 'Trebuchet MS';
   background-color: #45A29E; /* Green */
   border: none;
   color: white;
@@ -37,4 +39,11 @@ label{
   font-size: 16px;
   border-radius: 20px;
   width: 300px;
+  margin: 20px;
+}
+
+#InvalidLogin {
+  font-family: 'Trebuchet MS';
+  color: red;
+  display: none;
 }

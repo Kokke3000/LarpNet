@@ -4,7 +4,7 @@
     if (isset($_SESSION['Username'])) {
     
     } else {
-        header('Location: ../../LoginPage/login.html');
+        header('Location: ../../LoginPage/login.php');
     }
 ?>
 
@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     </head>
     <body>
-        <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Home"></button>
+        <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin"></button>
         <div id="center">
             <h1>Tähtikartat</h1>
         </div>

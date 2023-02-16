@@ -4,7 +4,7 @@
     if (isset($_SESSION['Username'])) {
     
     } else {
-        header('Location: ../../LoginPage/login.html');
+        header('Location: ../../LoginPage/login.php');
     }
 ?>
 
@@ -26,8 +26,8 @@
         <div id="center">
 
             <div id="main">
-                <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Home"></button>
-                <h1>Pankki</h1> 
+                <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin" class="button"></button>
+                <h1 id="Title">Inter Galaktinen Pankki</h1> 
 
                 <div id="CreditsContainer">
                 <h1 class="CreditDisplay">Krediittejä:</h1>
@@ -52,7 +52,7 @@
                         <label for="AmountToSend">Krediittien määrä:</label>
                         <input type="text" id="amount" name="AmountToSend" required="yes"><br><br>
 
-                        <input type="submit" value="Lähetä">
+                        <input type="submit" value="Lähetä" class="button">
                     </form>
                 </div>
             </div>

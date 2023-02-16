@@ -16,7 +16,22 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required="yes"><br><br>
                 <input type="submit" value="Log in" id="SubmitButton">
+                <br>
+                <p id="InvalidLogin">Invalid username or password!</p>
           </form>
         </div>
     </body>
+
+    
+        <?php
+            session_start();
+            if ($_SESSION['InvalidLogin'] == 1) {
+                echo (
+                '<script type="text/JavaScript"> 
+                document.getElementById("InvalidLogin").style.display = "inline";
+                </script>'
+                );
+            }
+        ?>
+
 </html>

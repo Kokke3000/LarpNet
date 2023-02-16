@@ -1,5 +1,7 @@
 body {
-    background-color: rgb(73, 67, 100);
+    min-height: 100vh;
+    background: gray;
+    overflow: hidden;
     font-family: 'Trebuchet MS';
     text-align: center;
 }
@@ -33,9 +35,11 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    width: 250px;
 }
 
 #NewsContainer {
+    color: white;
     position: absolute;
     text-align: left;
     top: 300px;
