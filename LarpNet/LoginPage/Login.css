@@ -1,5 +1,20 @@
+@font-face{
+  src: url(fonts/ELIXIA.ttf);
+  font-family: eli;
+}
 #center {
     text-align: center;
     position: relative;
     top: 50%;
 }
+body {
+  font-family: initial;
+
+}
+
+h1, label{
+  font-family: eli;
+  color: rgb(0, 0, 0);
+  
+}
+
