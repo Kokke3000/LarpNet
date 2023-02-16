@@ -1,5 +1,27 @@
+@font-face{
+  src: url(Elixia.ttf);
+  font-family: eli;
+}
 #center {
     text-align: center;
     position: relative;
     top: 50%;
 }
+body {
+  font-family: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+   background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  overflow: hidden;
+}
+
+h1{
+  font-family: eli;
+  color: white;
+}
+label{
+  color: white;
+}
+
