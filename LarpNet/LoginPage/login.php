@@ -24,4 +24,17 @@
           </form>
         </div>
     </body>
+
+    
+        <?php
+            session_start();
+            if ($_SESSION['InvalidLogin'] == 1) {
+                echo (
+                '<script type="text/JavaScript"> 
+                document.getElementById("InvalidLogin").style.display = "inline";
+                </script>'
+                );
+            }
+        ?>
+
 </html>

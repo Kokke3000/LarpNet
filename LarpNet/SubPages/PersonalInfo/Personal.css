@@ -1,0 +1,15 @@
+#DescriptionContainer {
+    width: fit-content;
+    height: flex;
+    padding: 10px;
+    margin: 10px;
+    border: dotted;
+}
+
+#InfoContainer {
+    width: fit-content;
+    height: flex;
+    padding: 10px;
+    margin: 10px;
+    border: dotted;
+}
