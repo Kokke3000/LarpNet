@@ -40,9 +40,14 @@
             </div>
         </div>
     </body>
-    
-    <script src="LoadInfo.js"></script>
+
     <script>
-        var PlayerName = <?php echo json_encode($_SESSION['Username']); ?>;
+
+        var PlayerName = <?php 
+        $str=preg_replace('/\s+/', '', $_SESSION['Username']);
+        echo json_encode($str); 
+        ?>;
     </script>
+    <script src="LoadInfo.js"></script>
+    
 </html>
