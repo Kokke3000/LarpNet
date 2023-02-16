@@ -1,5 +1,5 @@
 @font-face{
-  src: url(./fonts/ELIXIA.ttf);
+  src: url(Elixia.ttf);
   font-family: eli;
 }
 #center {
@@ -17,8 +17,11 @@ body {
   overflow: hidden;
 }
 
-h1, label{
+h1{
   font-family: eli;
+  color: white;
+}
+label{
   color: white;
 }
 
