@@ -36,19 +36,22 @@
 
                 <div id="HistoryContainer">
                     <br>
-                    <p>Pankkihistoria
+                    <p>Pankkihistoria:</p>
                     <div id="History">
-                        <p> 23:59 : +58 Krediittiä lähettäjältä: Mako Rutledge <p>
+                    
                     </div>
                 </div>
                 
                 <div id="SendMoneyContainer">
                     <p>Lähetä krediittejä<p>
-                    <form action="SendMoney.php" method="post" d="Form">
+                    <form action="SendMoney.php" method="post" id="Form">
+
                         <label for="RecieverName">Saajan nimi:</label>
                         <input type="text" id="username" name="RecieverName" required="yes"><br><br>
+
                         <label for="AmountToSend">Krediittien määrä:</label>
-                        <input type="text" id="amount" name="RecieverName" required="yes"><br><br>
+                        <input type="text" id="amount" name="AmountToSend" required="yes"><br><br>
+
                         <input type="submit" value="Lähetä">
                     </form>
                 </div>
