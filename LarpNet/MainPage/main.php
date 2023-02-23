@@ -23,6 +23,7 @@
                     <input type="button" id="button" onclick="window.location.href='../SubPages/Banking/Bank.php';" value="Inter Galaktinen Pankki"></button>
                     <input type="button" id="button" onclick="window.location.href='../SubPages/Encyclopedia/Encyclopedia.php';" value="Tietokirja"></button>
                     <input type="button" id="button" onclick="window.location.href='../SubPages/StarMaps/Maps.php';" value="Tähtikartat"></button>
+                    <input type="button" id="button" onclick="window.location.href='../SubPages/Notes/Notes.php';" value="Muistiinpanot"></button>
                     </ul>
                 </nav>    
             </div>
@@ -30,7 +31,7 @@
             <div id="NewsContainer">
                 <h1>Intergalaktiset uutiset:<h1>
                 <div id="News">
-                    <p>This is a test news article<p>
+                    <p>Tämä on testi artikkeli<p>
                 </div>
             </div>
         </div>

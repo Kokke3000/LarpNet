@@ -18,23 +18,43 @@ $AmountToSend = $_POST['AmountToSend'];
 //Establishing connection to database
 $conn = new mysqli("192.168.1.135", "root", "TietokannanSalis1234", "Players");
 
-//Selecting all messages and printing them out
+//Checking if the "Send to" address exists
 $stmt = $conn->prepare("SELECT `Credits` FROM `Player_Data` WHERE BINARY `InGameName` = ?");
 $stmt->bind_param('s', $SendTo);
 $stmt->execute();
 $result = $stmt->get_result();
 
 if(mysqli_num_rows($result) > 0) {
-    $stmt = $conn->prepare("UPDATE `Player_Data` SET `Credits` = `Credits` -  ? WHERE BINARY `InGameName` = ?");
-    $stmt->bind_param('is', $AmountToSend, $_SESSION['Username']);
-    $stmt->execute();
 
-    $stmt = $conn->prepare("UPDATE `Player_Data` SET `Credits` = `Credits` +  ? WHERE BINARY `InGameName` = ?");
-    $stmt->bind_param('is', $AmountToSend, $SendTo);
+    //Getting amount of money on players account
+    $stmt = $conn->prepare("SELECT `Credits` FROM `Player_Data` WHERE BINARY `InGameName` = ?");
+    $stmt->bind_param('s', $_SESSION['Username']);
     $stmt->execute();
+    $result = $stmt->get_result();
 
-    header('Location: Bank.php');
+    //Checking if the account has enough money to send
+    while ($row = mysqli_fetch_assoc($result)) {
+        if ($row['Credits'] >= $AmountToSend) {
+
+            //Reducing mony from sender
+            $stmt = $conn->prepare("UPDATE `Player_Data` SET `Credits` = `Credits` -  ? WHERE BINARY `InGameName` = ?");
+            $stmt->bind_param('is', $AmountToSend, $_SESSION['Username']);
+            $stmt->execute();
+            
+            //Adding money to reciever
+            $stmt = $conn->prepare("UPDATE `Player_Data` SET `Credits` = `Credits` +  ? WHERE BINARY `InGameName` = ?");
+            $stmt->bind_param('is', $AmountToSend, $SendTo);
+            $stmt->execute();
+            
+            $_SESSION['MoneySentError'] = 1;
+            header('Location: Bank.php');
+        } else {
+            $_SESSION['MoneySentError'] = 3;
+            header('Location: Bank.php');
+        }
+    }
 } else {
+    $_SESSION['MoneySentError'] = 2;
     header('Location: Bank.php');
 }
 ?>
