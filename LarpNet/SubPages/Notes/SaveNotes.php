@@ -13,8 +13,8 @@ error_reporting(E_ALL);
 
 $Notes = $_POST['NewNotes'];
 
-//Establishing connection to database
-$conn = new mysqli("192.168.1.135", "root", "TietokannanSalis1234", "Players");
+//Including connection to the database
+include "../../connection.php";
 
 if ($conn->connect_error) {
     die('Conection Failed: '.$conn->connect_error);

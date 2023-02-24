@@ -15,8 +15,9 @@ error_reporting(E_ALL);
 $SendTo = $_POST['RecieverName'];
 $AmountToSend = $_POST['AmountToSend'];
 
-//Establishing connection to database
-$conn = new mysqli("192.168.1.135", "root", "TietokannanSalis1234", "Players");
+//Including connection to the database
+include "../../connection.php";
+
 
 //Checking if the "Send to" address exists
 $stmt = $conn->prepare("SELECT `Credits` FROM `Player_Data` WHERE BINARY `InGameName` = ?");
