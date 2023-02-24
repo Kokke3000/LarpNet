@@ -10,8 +10,8 @@ if (isset($_SESSION['Username'])) {
 $NotesRecieved = $_POST['Notes'];
 $Notes = json_decode($NotesRecieved);
 
-//Establishing connection to database
-$conn = new mysqli("192.168.1.135", "root", "TietokannanSalis1234", "Players");
+//Including connection to the database
+include "../../connection.php";
 
 //Selecting all messages and printing them out
 $stmt = $conn->prepare("SELECT `PlayersNotes` FROM `Notes` WHERE BINARY `InGameName` = ?");

@@ -3,8 +3,8 @@ session_start();
 $user = $_POST['username'];
 $pass = $_POST['password'];
 
+include "../connection.php";
 
-$conn = new mysqli("192.168.1.135", "root", "TietokannanSalis1234", "Players");
 if ($conn->connect_error) {
     die('Conection Failed: '.$conn->connect_error);
 } else {
