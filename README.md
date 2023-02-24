@@ -11,6 +11,8 @@ LarpNet should be installed by cloning the files to the root of where your web-s
 
 The project is deployed on an Apache2 web-server and a MySQL database running on local network. The project can be changed as needed for deployment on other platforms.
 
+Yes, i know the MySQL password and database info are in the files, i know that is not best practice but because the project is designed to never run on a publically accessible server, this isn't an issue.
+
 ## Collaborators / Their duties
 - Myself: PHP, Javascript, HTML, Server handling
 - SupahMonke: CSS, HTML
