@@ -19,7 +19,3 @@ The project is deployed on an Apache2 web-server and a MySQL database running on
 
 This is a personal project, no outside pull requests or merges will be accepted. The repo is public only for sharing the code in CV and larp-planning purposes.
 
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
