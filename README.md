@@ -1,11 +1,25 @@
-# LarpNet
-LarpNet is a digital user interface website for a Sci-fi themed larp in the summer of 2023.
+# LarpNet (WIP/In development)
 
-It is produced by myself and my friend as a personal project.
-We are splitting the workload by me doing the main part of the server-side programming and php and my friend doing the CSS and outlook of the website.
+LarpNet is a UI-website being developed for a Sci-fi themed larp in 2023, collaborated on by myself and my friend.
 
-The programming languages used for this project are: html, css, php and JavaScript.
+## Installation
+Quite self-explanatory.
 
-The website itself is running on an Apache2 web-server and the user-data is and will be stored in a MySQL database.
+LarpNet should be installed by cloning the files to the root of where your web-server gets it's files from.
 
-This project will most likely not be publically available.
+## Deployment
+
+The project is deployed on an Apache2 web-server and a MySQL database running on local network. The project can be changed as needed for deployment on other platforms.
+
+## Collaborators / Their duties
+- Myself: PHP, Javascript, HTML, Server handling
+- SupahMonke: CSS, HTML
+
+## Contributing
+
+This is a personal project, no outside pull requests or merges will be accepted. The repo is public only for sharing the code in CV and larp-planning purposes.
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
