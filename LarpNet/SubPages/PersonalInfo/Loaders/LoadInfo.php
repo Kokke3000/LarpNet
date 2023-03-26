@@ -1,14 +1,16 @@
 <?php
+
+//Including connection to the database
+include "../../../connection.php";
+
 //Checking if user has a valid login
-session_start();
 if (isset($_SESSION['Username'])) {
     
 } else {
     header('Location: ../../LoginPage/login.php');
 }
 
-//Including connection to the database
-include "../../../connection.php";
+
 
 //Selecting all messages and printing them out
 $stmt = $conn->prepare("SELECT * FROM `Character_Info` WHERE BINARY `InGameName` = ?");

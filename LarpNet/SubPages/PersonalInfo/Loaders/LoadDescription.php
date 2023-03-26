@@ -1,14 +1,15 @@
 <?php
-//Checking if user has a valid login
-session_start();
+
+//Including connection to the database
+include "../../../connection.php";
+
+//Checking if user has a valid loginz
 if (isset($_SESSION['Username'])) {
     
 } else {
     header('Location: ../../LoginPage/login.php');
 }
 
-//Including connection to the database
-include "../../../connection.php";
 
 
 //Selecting all messages and printing them out
