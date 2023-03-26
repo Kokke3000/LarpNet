@@ -2,5 +2,5 @@
 
 session_start();
 
-$conn = new mysqli("192.168.1.135", "root", "TietokannanSalis1234", "Players");
+$conn = new mysqli("localhost", "server", "TurvallisinSalasana", "Players");
 ?>
