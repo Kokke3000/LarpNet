@@ -23,7 +23,6 @@
                     <input type="button" id="button" onclick="window.location.href='../SubPages/Banking/Bank.php';" value="Inter Galaktinen Pankki"></button>
                     <input type="button" id="button" onclick="window.location.href='../SubPages/Encyclopedia/Encyclopedia.php';" value="Tietokirja"></button>
                     <input type="button" id="button" onclick="window.location.href='../SubPages/StarMaps/Maps.php';" value="Tähtikartat"></button>
-                    <input type="button" id="button" onclick="window.location.href='../SubPages/Notes/Notes.php';" value="Muistiinpanot"></button>
                     </ul>
                 </nav>    
             </div>
