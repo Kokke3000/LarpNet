@@ -8,8 +8,8 @@ if (isset($_SESSION['Username'])) {
 }
 
 
-//Establishing connection to database
-$conn = new mysqli("192.168.1.135", "root", "TietokannanSalis1234", "Players");
+//Including connection to the database
+include "../../connection.php";
 
 //Selecting all messages and printing them out
 $stmt = $conn->prepare("SELECT `Credits` FROM `Player_Data` WHERE BINARY `InGameName` = ?");
@@ -22,5 +22,5 @@ if(mysqli_num_rows($result) > 0) {
         echo $row['Credits'];
         echo "</p>";
     }
-} else {echo "There are no messages";}
+} else {echo "Error loading bank data!";}
 ?>

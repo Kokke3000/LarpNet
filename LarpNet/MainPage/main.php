@@ -30,7 +30,7 @@
             <div id="NewsContainer">
                 <h1>Intergalaktiset uutiset:<h1>
                 <div id="News">
-                    <p>This is a test news article<p>
+                    <p>Tämä on testi artikkeli<p>
                 </div>
             </div>
         </div>

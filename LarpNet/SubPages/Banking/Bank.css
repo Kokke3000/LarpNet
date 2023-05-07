@@ -67,3 +67,13 @@ body {
     width: 100px;
     height: 40px;
 }
+
+#SendMoneyFeedback {
+    display: none;
+    color: red;
+    padding: 5px;
+}
+
+#FeedbackContainer {
+    margin-top: 10px;
+}

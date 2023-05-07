@@ -54,10 +54,50 @@
 
                         <input type="submit" value="Lähetä" class="button">
                     </form>
+
+                    <div id="FeedbackContainer">
+                    <p id="SendMoneyFeedback"><p>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
+
+    <?php
+    //Error displaying
+    session_start();
+
+    if ($_SESSION['MoneySentError'] == 1) {
+        echo (
+        '<script type="text/JavaScript"> 
+        document.getElementById("SendMoneyFeedback").style.display = "inline";
+        document.getElementById("SendMoneyFeedback").style.color = "green";
+        document.getElementById("SendMoneyFeedback").innerHTML = "Krediitit lähetetty!"
+        </script>'
+        );
+    }
+
+    if ($_SESSION['MoneySentError'] == 2) {
+        echo (
+        '<script type="text/JavaScript"> 
+        document.getElementById("SendMoneyFeedback").style.display = "inline";
+        document.getElementById("SendMoneyFeedback").style.color = "red";
+        document.getElementById("SendMoneyFeedback").innerHTML = "Saajan nimeä ei tunnistettu!"
+        </script>'
+        );
+    }
+
+    if ($_SESSION['MoneySentError'] == 3) {
+        echo (
+        '<script type="text/JavaScript"> 
+        document.getElementById("SendMoneyFeedback").style.display = "inline";
+        document.getElementById("SendMoneyFeedback").style.color = "red";
+        document.getElementById("SendMoneyFeedback").innerHTML = "Ei tarpeeksi krediittejä!"
+        </script>'
+        );
+    }
+    ?>
+
 
     <script src="Load.js"></script>
 </html>
