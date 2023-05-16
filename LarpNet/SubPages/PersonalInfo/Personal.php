@@ -23,20 +23,23 @@
 
     <body>
         <div id="center">
+            
             <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin"></button>
             <h1>Omat tiedot</h1>
 
-            <div id="InfoContainer">
+            <div id="ImageContainer">
+                <img id="PlayerImage"></img>
+            </div>
 
+            
+            <div id="InfoContainer">
+                <h2>Perustiedot: </h2>
+                <p id="Info"></p>
             </div>
 
             <div id="DescriptionContainer">
-                <h2>Kuvaus</h2>
+                <h2>Kuvaus: </h2>
                 <p id="Description"></p>
-            </div>
-
-            <div id="ImageContainer">
-                <img id="PlayerImage"></img>
             </div>
         </div>
     </body>

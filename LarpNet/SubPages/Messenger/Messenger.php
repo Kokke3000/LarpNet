@@ -11,13 +11,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="Messenger.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     </head>
     <body>
         <div id="center">
             <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin"></button>
-            <h1>Tietokirja</h1>
+            <h1>Viestiloki:</h1>
         </div>
     </body>
 

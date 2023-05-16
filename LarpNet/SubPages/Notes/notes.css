@@ -20,6 +20,33 @@
      background: radial-gradient(ellipse at bottom, #162e4e 0%, #0c0d13 100%);
     overflow: hidden;
   }
+  
+  #Title {
+    font-family: eli;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#title {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#NewNoteContainer {
+    margin-top: 50px;
+    width: 500px;
+    height: auto;
+    border: 1px;
+} 
+
+#Notes {
+    border: 1px solid white;
+    padding: 20px;
+    width: 500px;
+    height: auto;
+    max-height: 500px;
+    overflow-y: scroll;
+} 
 
 .button {
     font-family: 'Trebuchet MS';
@@ -34,21 +61,3 @@
     width: 100px;
     height: 40px;
 }
-
-#InfoContainer {
-    border: 1px solid white;
-    padding: 5px;
-  }
-
-#DescriptionContainer {
-margin-top: 20px;
-border: 1px solid white;
-padding: 5px;
-}
-
-#ImageContainer {
-    border: 1px solid white;
-    margin-bottom: 20px;
-    width: fit-content;
-    height: fit-content;
-  }

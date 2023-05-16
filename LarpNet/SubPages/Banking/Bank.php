@@ -65,8 +65,7 @@
 
     <?php
     //Error displaying
-    session_start();
-
+    if (isset($_SESSION['MoneySentError'])) {
     if ($_SESSION['MoneySentError'] == 1) {
         echo (
         '<script type="text/JavaScript"> 
@@ -96,6 +95,7 @@
         </script>'
         );
     }
+}
     ?>
 
 

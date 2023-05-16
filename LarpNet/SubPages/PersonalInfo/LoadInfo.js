@@ -1,12 +1,14 @@
+$("#Description").load("Loaders/LoadDescription.php");
+$("#Info").load("Loaders/LoadInfo.php");
 
 imagelink = "PlayerImages/" + PlayerName + ".jpg";
+document.getElementById("PlayerImage").src = imagelink;
 
-console.log(imagelink)
 
 window.setInterval(function () {
     $("#Description").load("Loaders/LoadDescription.php");
 
-    $("#InfoContainer").load("Loaders/LoadInfo.php");
+    $("#Info").load("Loaders/LoadInfo.php");
 
 
     document.getElementById("PlayerImage").src = imagelink;

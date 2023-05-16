@@ -16,22 +16,17 @@
     </head>
     <body>
         <div id="center">
+            <h1>Intergalaktinen Henkilörekisteri</h1>
             <div id="top-bar">
                 <nav>
                     <ul id="Buttons">
                     <input type="button" id="button" onclick="window.location.href='../SubPages/PersonalInfo/Personal.php';" value="Omat tiedot"></button>
                     <input type="button" id="button" onclick="window.location.href='../SubPages/Banking/Bank.php';" value="Inter Galaktinen Pankki"></button>
-                    <input type="button" id="button" onclick="window.location.href='../SubPages/Encyclopedia/Encyclopedia.php';" value="Tietokirja"></button>
+                    <input type="button" id="button" onclick="window.location.href='../SubPages/Notes/Notes.php';" value="Muistio"></button>
+                    <input type="button" id="button" onclick="window.location.href='../SubPages/Messenger/Messenger.php';" value="Messenger"></button>
                     <input type="button" id="button" onclick="window.location.href='../SubPages/StarMaps/Maps.php';" value="Tähtikartat"></button>
                     </ul>
                 </nav>    
-            </div>
-
-            <div id="NewsContainer">
-                <h1>Intergalaktiset uutiset:<h1>
-                <div id="News">
-                    <p>Tämä on testi artikkeli<p>
-                </div>
             </div>
         </div>
     </body>

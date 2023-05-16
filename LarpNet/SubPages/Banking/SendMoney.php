@@ -7,10 +7,6 @@ if (isset($_SESSION['Username'])) {
     header('Location: ../../LoginPage/login.php');
 }
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 
 $SendTo = $_POST['RecieverName'];
 $AmountToSend = $_POST['AmountToSend'];

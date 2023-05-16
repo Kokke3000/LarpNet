@@ -1,21 +1,30 @@
-body {
-    min-height: 100vh;
-    background: gray;
-    overflow: hidden;
-    font-family: 'Trebuchet MS';
-    text-align: center;
-}
+@font-face{
+    src: url(Elixia.ttf);
+    font-family: eli;
+  }
 
 #center {
     text-align: center;
     position: relative;
     top: 50%;
-}
+    height: auto;
+    color: white;
+    font-family: 'Trebuchet MS';
 
+  }
+  body {
+    font-family: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     background: radial-gradient(ellipse at bottom, #162e4e 0%, #0c0d13 100%);
+    overflow: hidden;
+  }
+  
 
 #Buttons {
-    
-        float: left;
+        margin-right: 200px;
         list-style: none;
         text-align: center;
         width: 100px;
@@ -25,17 +34,17 @@ body {
 }
 
 #button {
-    -webkit-appearance: none;
-    background-color: darkblue;
-    border-radius: 0px;
-    border: 5px;
-    color: #D1E8E2;
-    padding: 15px 32px;
+    font-family: 'Trebuchet MS';
+    background-color: #45A29E; /* Green */
+    border: none;
+    color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    width: 250px;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 300px;
+    height: 50px;
 }
 
 #NewsContainer {
