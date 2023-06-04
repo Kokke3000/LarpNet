@@ -10,24 +10,30 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <div id="center">
-            <h1>Intergalaktinen Henkilörekisteri</h1>
-            <div id="top-bar">
-                <nav>
-                    <ul id="Buttons">
-                    <input type="button" id="button" onclick="window.location.href='../SubPages/PersonalInfo/Personal.php';" value="Omat tiedot"></button>
-                    <input type="button" id="button" onclick="window.location.href='../SubPages/Banking/Bank.php';" value="Inter Galaktinen Pankki"></button>
-                    <input type="button" id="button" onclick="window.location.href='../SubPages/Notes/Notes.php';" value="Muistio"></button>
-                    <input type="button" id="button" onclick="window.location.href='../SubPages/Messenger/Messenger.php';" value="Messenger"></button>
-                    <input type="button" id="button" onclick="window.location.href='../SubPages/StarMaps/Maps.php';" value="Tähtikartat"></button>
-                    </ul>
-                </nav>    
-            </div>
-        </div>
-    </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <link rel="stylesheet" href="main.css">
+  <title>Main Page</title>
+</head>
+<body>
+  <div id="center">
+    <div id="top-bar">
+      <nav>
+            <button class="btn"><span class="btn__content"><a href="../SubPages/PersonalInfo/Personal.php">Omat tiedot</a></span></button>
+            <button class="btn"><span class="btn__content"><a href="../SubPages/Banking/Bank.php">Inter Galaktinen Pankki</a></span></button>
+            <button class="btn"><span class="btn__content"><a href="../SubPages/Notes/Notes.php">Muistio</a></span></button>
+            <button class="btn"><span class="btn__content"><a href="../SubPages/Messenger/Messenger.php">Messenger</a></span></button>
+            <button class="btn"><span class="btn__content"><a href="../SubPages/CrewLog/CrewLog.php">Miehistöloki</a></span></button>
+        
+      </nav>    
+    </div>
+
+    <div id="NewsContainer">
+      <h1>Intergalaktiset uutiset:</h1>
+      <div id="News">
+        <p>Tämä on testiartikkeli</p>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

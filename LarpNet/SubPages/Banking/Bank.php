@@ -12,7 +12,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="Bank.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=0.8" /> 
     </head>
 
     <script

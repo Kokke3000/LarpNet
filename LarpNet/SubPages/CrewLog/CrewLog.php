@@ -11,13 +11,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="CrewLog.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     </head>
     <body>
-        <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin"></button>
         <div id="center">
-            <h1>Tähtikartat</h1>
+            <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin"></button>
+            <h1>Miehistöloki:</h1>
         </div>
     </body>
 
