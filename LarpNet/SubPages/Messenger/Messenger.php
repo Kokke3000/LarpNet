@@ -24,7 +24,7 @@
     <body>
         <div id="center">
             <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin"></button>
-            <h1>Viestiloki:</h1>
+            <h1 id="Title">Viestiloki:</h1>
 
             <div id="Chat">
             </div>
