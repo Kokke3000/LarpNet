@@ -28,5 +28,5 @@ if(mysqli_num_rows($result) > 0) {
         echo ")";
         echo "</p>";
     }
-} else {echo "Sinulla ei ole muistiinpanoja!";}
+} else {echo "You have no notes!";}
 ?>

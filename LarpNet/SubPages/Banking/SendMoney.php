@@ -42,6 +42,12 @@ if(mysqli_num_rows($result) > 0) {
             $stmt = $conn->prepare("UPDATE `Player_Data` SET `Credits` = `Credits` +  ? WHERE BINARY `InGameName` = ?");
             $stmt->bind_param('is', $AmountToSend, $SendTo);
             $stmt->execute();
+
+            //Creating history log
+            $stmt = $conn->prepare("INSERT INTO `Bank_History` (Sender, Reciever, Amount)
+            VALUES(?, ?, ?)");
+            $stmt->bind_param('ssi', $_SESSION['Username'], $SendTo, $AmountToSend);
+            $stmt->execute();
             
             $_SESSION['MoneySentError'] = 1;
             header('Location: Bank.php');

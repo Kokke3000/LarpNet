@@ -24,8 +24,8 @@
     <body>
         <div id="center">
             
-            <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Takaisin"></button>
-            <h1>Omat tiedot</h1>
+            <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Back"></button>
+            <h1>Personal info</h1>
 
             <div id="ImageContainer">
                 <img id="PlayerImage"></img>
@@ -33,12 +33,12 @@
 
             
             <div id="InfoContainer">
-                <h2>Perustiedot: </h2>
+                <h2>Basic info: </h2>
                 <p id="Info"></p>
             </div>
 
             <div id="DescriptionContainer">
-                <h2>Kuvaus: </h2>
+                <h2>Description: </h2>
                 <p id="Description"></p>
             </div>
         </div>

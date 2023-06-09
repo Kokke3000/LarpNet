@@ -22,5 +22,5 @@ if(mysqli_num_rows($result) > 0) {
         echo $row['Credits'];
         echo "</p>";
     }
-} else {echo "Ei pankkitietoja!";}
+} else {echo "Error loading bank data!";}
 ?>

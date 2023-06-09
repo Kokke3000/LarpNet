@@ -33,3 +33,12 @@
     border-style: solid;
     padding: 10px;
 }
+
+#Name {
+  margin: 10px;
+}
+
+#notice {
+  font-size: 15px;
+  color: red;
+}

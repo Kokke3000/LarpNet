@@ -18,7 +18,7 @@ if (empty($_POST['message'])) {
 } else {
 
 
-
+    if ($_SESSION['Username'] != 'Sussy Baka') {
 
     //Taking the input from the Post method into php variables
     $user = $_SESSION['Username'];
@@ -29,6 +29,7 @@ if (empty($_POST['message'])) {
         VALUES(?, ?)");
         $stmt->bind_param('ss', $message, $user);
         $stmt->execute();
+    }
 } 
 
   

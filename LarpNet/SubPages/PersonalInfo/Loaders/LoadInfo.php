@@ -22,28 +22,33 @@ if(mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         
         echo "<p>";
-        echo "<label for='InGameName'>Nimi: </label>";
+        echo "<label for='InGameName'>Name: </label>";
         echo $row['InGameName'];
         echo "</p>";
 
         echo "<p>";
-        echo "<label for='Age'>Ikä: </label>";
+        echo "<label for='Age'>Age: </label>";
         echo $row['Age'];
         echo "</p>";
 
         echo "<p>";
-        echo "<label for='Pronouns'>Pronominit: </label>";
+        echo "<label for='Pronouns'>Pronouns: </label>";
         echo $row['Pronouns'];
         echo "</p>";
 
         echo "<p>";
-        echo "<label for='Skills'>Taidot: </label>";
+        echo "<label for='Skills'>Skills: </label>";
         echo $row['Skills'];
         echo "</p>";
 
         echo "<p>";
-        echo "<label for='JobTitle'>Työnimike: </label>";
+        echo "<label for='JobTitle'>Job title: </label>";
         echo $row['JobTitle'];
+        echo "</p>";
+
+        echo "<p>";
+        echo "<label for='JobTitle'>Privacy protected info: </label>";
+        echo $row['Secret'];
         echo "</p>";
     }
 } else {echo "Error while loading info!";}

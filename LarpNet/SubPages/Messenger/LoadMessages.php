@@ -16,14 +16,17 @@ $user = $_SESSION['Username'];
     $stmt = $conn->prepare("SELECT * FROM Messages");
     $stmt->execute();
     $result = $stmt->get_result();
-
-    if(mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<p>";
-            echo $row['sender'];
-            echo ": ";
-            echo $row['message'];
-            echo "</p>";
-        }
-    } else {echo "There are no messages";}
+    if ($_SESSION['Username'] = 'Sussy Baka') {
+        echo "<p style='color: red'>Sorry, the sussy baka cannot chat</p>";
+    } else {
+        if(mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<p>";
+                echo $row['sender'];
+                echo ": ";
+                echo $row['message'];
+                echo "</p>";
+            }
+        } else {echo "There are no messages";}
+    }
 ?>
