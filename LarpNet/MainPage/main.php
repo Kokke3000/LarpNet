@@ -4,7 +4,11 @@
     if (isset($_SESSION['Username'])) {
     
     } else {
-        //header('Location: ../LoginPage/login.php');
+        header('Location: ../LoginPage/login.php');
+    }
+    
+    if ($_SESSION['Username'] !=='Admin') {
+      $style = "style='display:none;'";
     }
 ?>
 
@@ -25,14 +29,16 @@
     <button class="btn"><span class="btn__content"><a href="../SubPages/CrewLog/CrewLog.php">Crew log</a></span></button>
 </nav>
 
->>>>>>> Stashed changes
+  <div id="Admin">
+  <button class="btn" <?php echo $style;?>><span class="btn__content"><a href="../SubPages/Admin/Admin.php">Admin controlls</a></span></button>
+  </div>
 
-            <div id="NewsContainer">
-                <h1>Intergalaktiset uutiset:<h1>
-                <div id="News">
-                    <p>Tämä on testi artikkeli<p>
-                </div>
-            </div>
-        </div>
-    </body>
+    <div id="NewsContainer">
+      <h1>Intergalactic news:</h1>
+      <div id="News">
+        <p>Error 404: Network timed out, check your interstellarnet connection</p>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

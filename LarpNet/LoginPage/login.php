@@ -5,24 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="Login.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Kirjautuminen</title>
+        <title>Login</title>
     </head>
     <body>
         <img class="planet" src="planet.png" alt="planeetta">
         <div id="center">
             <div class="h1div">
-            <h1>Intergalaktinen Henkilörekisteri</h1>
+            <h1>Intergalactic personel registry</h1>
             </div>
             <form action="Check.php" method="post" id="Form">
                 <div class="login">
-                    <label for="username">Käyttäjänimi:</label>
+                    <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required="yes"><br><br>
-                    <label for="password">Salasana:</label>
+                    <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required="yes"><br><br>
                     <input type="submit" id="login" value="Log in">
                     <br>
                     <div id="InvalidLogin">
-                    <p>Väärä käyttäjänimi tai salasana!<p>
+                    <p>Wrong username or password!<p>
                     </div>
                 </div>
           </form>

@@ -10,7 +10,13 @@ if (isset($_SESSION['Username'])) {
     header('Location: ../../LoginPage/login.php');
 }
 
-
+$servicename = "Personal";
+$stmt = $conn->prepare("SELECT * FROM `Disabled_Systems` WHERE BINARY `SystemName` = ? AND `Status` = 'disabled'");
+$stmt->bind_param('s', $servicename);
+$stmt->execute();
+$rows = mysqli_num_rows($stmt->get_result());
+//If user with given name exists
+if ($rows < 1) {
 
 //Selecting all messages and printing them out
 $stmt = $conn->prepare("SELECT * FROM `Character_Info` WHERE BINARY `InGameName` = ?");
@@ -20,8 +26,7 @@ $result = $stmt->get_result();
 
 if(mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "<h2>Perustiedot</h2>";
-
+        
         echo "<p>";
         echo "<label for='InGameName'>Name: </label>";
         echo $row['InGameName'];
@@ -46,6 +51,13 @@ if(mysqli_num_rows($result) > 0) {
         echo "<label for='JobTitle'>Job title: </label>";
         echo $row['JobTitle'];
         echo "</p>";
+
+        echo "<p>";
+        echo "<label for='JobTitle'>Privacy protected info: </label>";
+        echo $row['Secret'];
+        echo "</p>";
     }
 } else {echo "Error while loading info!";}
+
+} else {echo "Error 420: Virus alert!";}
 ?>

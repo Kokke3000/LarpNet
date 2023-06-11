@@ -26,6 +26,7 @@ body {
   padding: 40px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin: 10px;
+  max-width: 60vw;
 }
 
 #News h1 {

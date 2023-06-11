@@ -1,15 +1,53 @@
-#DescriptionContainer {
-    width: fit-content;
-    height: flex;
-    padding: 10px;
-    margin: 10px;
-    border: dotted;
+@font-face{
+    src: url(../../LoginPage/Elixia.ttf);
+    font-family: eli;
+  }
+
+#center {
+    text-align: left;
+    position: relative;
+    top: 20%;
+    height: auto;
+    color:  white;
+  }
+
+  body {
+    font-family: 'Trebuchet MS';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     background: radial-gradient(ellipse at bottom, #162e4e 0%, #0c0d13 100%);
+  }
+
+.button {
+    font-family: 'Trebuchet MS';
+    background-color: #45A29E; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
 }
 
 #InfoContainer {
-    width: fit-content;
-    height: flex;
-    padding: 10px;
-    margin: 10px;
-    border: dotted;
+    border: 1px solid white;
+    padding: 5px;
+  }
+
+#DescriptionContainer {
+margin-top: 20px;
+border: 1px solid white;
+padding: 5px;
 }
+
+#ImageContainer {
+    border: 1px solid white;
+    margin-bottom: 20px;
+    width: fit-content;
+    height: fit-content;
+  }

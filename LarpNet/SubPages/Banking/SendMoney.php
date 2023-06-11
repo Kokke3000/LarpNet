@@ -7,10 +7,6 @@ if (isset($_SESSION['Username'])) {
     header('Location: ../../LoginPage/login.php');
 }
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 
 $SendTo = $_POST['RecieverName'];
 $AmountToSend = $_POST['AmountToSend'];
@@ -18,6 +14,16 @@ $AmountToSend = $_POST['AmountToSend'];
 //Including connection to the database
 include "../../connection.php";
 
+//Including connection to the database
+include "../../connection.php";
+
+$servicename = "Banking";
+$stmt = $conn->prepare("SELECT * FROM `Disabled_Systems` WHERE BINARY `SystemName` = ? AND `Status` = 'disabled'");
+$stmt->bind_param('s', $servicename);
+$stmt->execute();
+$rows = mysqli_num_rows($stmt->get_result());
+//If user with given name exists
+if ($rows < 1) {
 
 //Checking if the "Send to" address exists
 $stmt = $conn->prepare("SELECT `Credits` FROM `Player_Data` WHERE BINARY `InGameName` = ?");
@@ -46,6 +52,12 @@ if(mysqli_num_rows($result) > 0) {
             $stmt = $conn->prepare("UPDATE `Player_Data` SET `Credits` = `Credits` +  ? WHERE BINARY `InGameName` = ?");
             $stmt->bind_param('is', $AmountToSend, $SendTo);
             $stmt->execute();
+
+            //Creating history log
+            $stmt = $conn->prepare("INSERT INTO `Bank_History` (Sender, Reciever, Amount)
+            VALUES(?, ?, ?)");
+            $stmt->bind_param('ssi', $_SESSION['Username'], $SendTo, $AmountToSend);
+            $stmt->execute();
             
             $_SESSION['MoneySentError'] = 1;
             header('Location: Bank.php');
@@ -56,6 +68,10 @@ if(mysqli_num_rows($result) > 0) {
     }
 } else {
     $_SESSION['MoneySentError'] = 2;
+    header('Location: Bank.php');
+}
+
+} else {
     header('Location: Bank.php');
 }
 ?>
