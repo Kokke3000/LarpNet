@@ -1,7 +1,13 @@
 body {
-  background-color: #686868;
-  font-family: Arial, sans-serif;
+  font-family: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7314aa, #000000);
+  overflow: hidden;
 }
+
 
 #center {
   display: flex;
@@ -19,7 +25,7 @@ body {
   border-radius: 8px;
   padding: 40px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-top: 40px;
+  margin: 10px;
 }
 
 #News h1 {
@@ -44,7 +50,7 @@ body {
   --yellow-color: #fcee09; 
   --red-color: #ff003c;
   --black-color: #050a0e;
-  --blue-color: #00f0ff;
+  --blue-color: #00ffff;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
@@ -56,27 +62,43 @@ body {
   --blue-color: #00f0ff;
 }
 
-#top-bar {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .btn {
-    display: inline-block;
-    margin: 0 10px;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .btn__content {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: var(--yellow-color);
-    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
-  }
+.btn {
+  font-size: 20px;
+  display: inline-block;
+  margin: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+/*Button*/
+.btn__content {
+  justify-content: center;
+  align-items: center; /* Add this line */
+  padding: 10px;
+  display: flex;
+  position: relative;
+  background-color: var(--blue-color);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  width: 220px; /* Adjust the width as needed */
+  height: 50px;
+}
 
+
+.btn__content a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: 10px;
+  padding: 10px;
+}

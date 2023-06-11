@@ -79,6 +79,7 @@ h1{
 }
 
 #password, #username{
+  color: white;
   width: 100px;
   margin: 2px;
   border-radius: 7px;
