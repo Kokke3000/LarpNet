@@ -8,8 +8,8 @@ h1{
 
 
 <?php
-include "LarpNet/header.html";
-include "LarpNet/nav.php";
+//include "LarpNet/header.html";
+//include "LarpNet/nav.php";
 ?>
 
 
