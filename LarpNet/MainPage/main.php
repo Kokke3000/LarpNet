@@ -8,7 +8,7 @@
     }
     
     if ($_SESSION['Username'] !=='Admin') {
-      
+      $style = "style='display:none;'";
     }
 ?>
 
@@ -33,7 +33,7 @@
     </div>
 
   <div id="Admin">
-  <button class="btn"><span class="btn__content"><a href="../SubPages/Admin/Admin.php">Admin controlls</a></span></button>
+  <button class="btn" <?php echo $style;?>><span class="btn__content"><a href="../SubPages/Admin/Admin.php">Admin controlls</a></span></button>
   </div>
 
     <div id="NewsContainer">

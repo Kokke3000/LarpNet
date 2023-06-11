@@ -34,7 +34,7 @@
         <input type="button" class="btn" value="Enable Personal Info" id="EnablePersonal">
         <input type="button" class="btn" value="Enable Messenger" id="EnableMessenger">
         <input type="button" class="btn" value="Enable Banking" id="EnableBank">
-        <input type="button" class="btn" value="Enable Notepad" id="EnableeNotepad">
+        <input type="button" class="btn" value="Enable Notepad" id="EnableNotepad">
         <input type="button" class="btn" value="Enable Crew Log" id="EnableCrewLog">
         </div>
     </body>
