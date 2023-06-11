@@ -4,8 +4,7 @@
 }
 #center {
   text-align: center;
-  position: relative;
-  top: 50%;
+  position: absolute;
   height: auto;
 }
 body {
