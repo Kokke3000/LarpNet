@@ -11,6 +11,14 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 //Including connection to the database
 include "../../connection.php";
 
+$servicename = "Notepad";
+$stmt = $conn->prepare("SELECT * FROM `Disabled_Systems` WHERE BINARY `SystemName` = ? AND `Status` = 'disabled'");
+$stmt->bind_param('s', $servicename);
+$stmt->execute();
+$rows = mysqli_num_rows($stmt->get_result());
+//If user with given name exists
+if ($rows < 1) {
+
 //Selecting all messages and printing them out
 $stmt = $conn->prepare("SELECT * FROM `Notes` WHERE BINARY `owner` = ?");
 $stmt->bind_param('s', $_SESSION['Username']);
@@ -29,4 +37,6 @@ if(mysqli_num_rows($result) > 0) {
         echo "</p>";
     }
 } else {echo "You have no notes!";}
+
+} else {echo "Error 420: Virus alert!";}
 ?>

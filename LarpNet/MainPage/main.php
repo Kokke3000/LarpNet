@@ -6,6 +6,10 @@
     } else {
         header('Location: ../LoginPage/login.php');
     }
+    
+    if ($_SESSION['Username'] !=='Admin') {
+      
+    }
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +31,10 @@
         
       </nav>    
     </div>
+
+  <div id="Admin">
+  <button class="btn"><span class="btn__content"><a href="../SubPages/Admin/Admin.php">Admin controlls</a></span></button>
+  </div>
 
     <div id="NewsContainer">
       <h1>Intergalactic news:</h1>

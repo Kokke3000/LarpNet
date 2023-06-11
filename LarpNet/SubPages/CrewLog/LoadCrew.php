@@ -9,6 +9,13 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 //Including the connection to the database
 include("../../connection.php");
 
+$servicename = "CrewLog";
+$stmt = $conn->prepare("SELECT * FROM `Disabled_Systems` WHERE BINARY `SystemName` = ? AND `Status` = 'disabled'");
+$stmt->bind_param('s', $servicename);
+$stmt->execute();
+$rows = mysqli_num_rows($stmt->get_result());
+//If user with given name exists
+if ($rows < 1) {
 
 if (isset($_SESSION['SelectedCrew'])) {
     //Selecting and displaying the info of selected crew member
@@ -89,5 +96,5 @@ if (isset($_SESSION['SelectedCrew'])) {
     } else {echo "There are no crew members to display";}
 
 }
-
+} else {echo "Error 420: Virus alert!";}
 ?>

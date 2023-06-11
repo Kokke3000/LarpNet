@@ -14,6 +14,16 @@ $AmountToSend = $_POST['AmountToSend'];
 //Including connection to the database
 include "../../connection.php";
 
+//Including connection to the database
+include "../../connection.php";
+
+$servicename = "Banking";
+$stmt = $conn->prepare("SELECT * FROM `Disabled_Systems` WHERE BINARY `SystemName` = ? AND `Status` = 'disabled'");
+$stmt->bind_param('s', $servicename);
+$stmt->execute();
+$rows = mysqli_num_rows($stmt->get_result());
+//If user with given name exists
+if ($rows < 1) {
 
 //Checking if the "Send to" address exists
 $stmt = $conn->prepare("SELECT `Credits` FROM `Player_Data` WHERE BINARY `InGameName` = ?");
@@ -58,6 +68,10 @@ if(mysqli_num_rows($result) > 0) {
     }
 } else {
     $_SESSION['MoneySentError'] = 2;
+    header('Location: Bank.php');
+}
+
+} else {
     header('Location: Bank.php');
 }
 ?>
