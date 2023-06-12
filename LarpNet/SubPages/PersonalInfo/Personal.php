@@ -23,7 +23,7 @@
         <div id="center">
             
             <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Back"></button>
-            <h1>Personal info</h1>
+            <h1 id="Title">Personal info</h1>
 
             <div id="ImageContainer">
                 <img id="PlayerImage"></img>

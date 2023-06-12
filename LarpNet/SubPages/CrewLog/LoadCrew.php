@@ -33,7 +33,7 @@ if (isset($_SESSION['SelectedCrew'])) {
             
             echo "</img>";
             
-            echo "<h2 style='text-decoration: underline;'>Basic info</h2>";
+            echo "<h2 style='text-decoration: underline;'>Basic info:</h2>";
 
             echo "<p>";
             echo "<label for='InGameName'>Name: </label>";

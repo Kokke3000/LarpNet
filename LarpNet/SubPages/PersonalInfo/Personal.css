@@ -3,6 +3,11 @@
     font-family: eli;
   }
 
+#Title {
+  font-family: eli;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
 #center {
     text-align: left;
     position: relative;

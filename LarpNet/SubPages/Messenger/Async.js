@@ -1,6 +1,8 @@
+
+
 window.setInterval(function () {
     $("#Chat").load("LoadMessages.php");
-}, 250);
+}, 1000);
 
 //Function to send messages when button is pressed
 $("#Send").click(function () {

@@ -12,7 +12,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="Messenger.css">
-        <link rel="stylesheet" href="main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     </head>
 
@@ -26,23 +25,15 @@
             <h1 id="Title">Message log:</h1>
 
             <div id="Chat">
-
-
-                <form id="newmessage" autocomplete="off">
-                    <div class="textfield">
-                        <input autocomplete="false" name="hidden" type="text" style="display:none;">
-                        <textarea rows="3" cols="20" style="overflow:auto" type="text" required name="message" id="message" placeholder="New message"></textarea>
-                        <input class="send" type="button" value="Send" id="Send" name="Send">
-                    </div>
-                </form>
+            </div>  
+            
+            <form id="newmessage" autocomplete="off">
+            <div class="textfield">
+                <input autocomplete="false" name="hidden" type="text" style="display:none;">
+                <textarea rows="3" cols="20" style="overflow:auto" type="text" required name="message" id="message" placeholder="New message"></textarea>
+                <input class="send" type="button" value="Send" id="Send" name="Send">
             </div>
-   
-
-            
-                
-
-            
-            
+        </form> 
         </div>
         <input class="button" type="button" onclick="window.location.href='../../MainPage/main.php';" value="Back"></button>
     </body>

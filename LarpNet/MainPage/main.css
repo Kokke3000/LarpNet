@@ -23,6 +23,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin: 10px;
   max-width: 60vw;
+  font-family: 'Trebuchet MS';
 }
 
 #News h1 {
@@ -41,7 +42,7 @@ body {
         width: 10px;
     }
 } */
-@import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+
 
 :root {
   --yellow-color: #fcee09; 
@@ -50,7 +51,7 @@ body {
   --blue-color: #00ffff;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+
 
 :root {
   --yellow-color: #fcee09; 
@@ -87,6 +88,7 @@ body {
 
 
 .btn__content a {
+  display: block;
   text-decoration: none;
   color: #ffffff;
 }

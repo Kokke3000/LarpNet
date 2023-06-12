@@ -27,11 +27,9 @@
     <button class="btn"><span class="btn__content"><a href="../SubPages/Notes/Notes.php">Notepad</a></span></button>
     <button class="btn"><span class="btn__content"><a href="../SubPages/Messenger/Messenger.php">Messenger</a></span></button>
     <button class="btn"><span class="btn__content"><a href="../SubPages/CrewLog/CrewLog.php">Crew log</a></span></button>
+    <button class="btn" <?php if (isset($style)){echo $style;}?>><span class="btn__content"><a href="../SubPages/Admin/Admin.php">Admin controlls</a></span></button>
 </nav>
 
-  <div id="Admin">
-  <button class="btn" <?php echo $style;?>><span class="btn__content"><a href="../SubPages/Admin/Admin.php">Admin controlls</a></span></button>
-  </div>
 
     <div id="NewsContainer">
       <h1>Intergalactic news:</h1>
