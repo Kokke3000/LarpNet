@@ -19,25 +19,34 @@
   body {
     font-family: 'Trebuchet MS';
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-     background: radial-gradient(ellipse at bottom, #162e4e 0%, #0c0d13 100%);
+    background: linear-gradient(135deg, #7314aa, #000000);
+    overflow: hidden;
+    color: white;
   }
 
-.button {
-    font-family: 'Trebuchet MS';
-    background-color: #45A29E; /* Green */
+  :root {
+    --yellow-color: #fcee09; 
+    --red-color: #ff003c;
+    --black-color: #050a0e;
+    --blue-color: #00f0ff;
+  }
+  
+  .button {
+    font-size: 20px;
+    background: none;
     border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
-}
+    padding: 10px;
+    position: relative;
+    background-color: var(--blue-color);
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+    width: 220px;
+    height: 50px;
+  }
+  
 
 #InfoContainer {
     border: 1px solid white;
@@ -45,6 +54,7 @@
   }
 
 #DescriptionContainer {
+margin-bottom: 20px;
 margin-top: 20px;
 border: 1px solid white;
 padding: 5px;

@@ -6,14 +6,19 @@
 body {
     font-family: 'Trebuchet MS';
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-     background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    background: linear-gradient(135deg, #7314aa, #000000);
+    overflow: hidden;
     color: white;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
   }
+
+#center {
+    border-style: solid;
+    padding: 20px;
+}
 
 #Title {
     font-family: eli;
@@ -39,6 +44,7 @@ body {
     width: 350px;
     border-style: solid;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .CreditDisplay {
@@ -56,19 +62,25 @@ body {
 }
 
 
-.button {
-    font-family: 'Trebuchet MS';
-    background-color: #45A29E; /* Green */
+:root {
+    --yellow-color: #fcee09; 
+    --red-color: #ff003c;
+    --black-color: #050a0e;
+    --blue-color: #00f0ff;
+  }
+  
+  .button {
+    font-size: 20px;
+    margin: 10px;
+    background: none;
     border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
-}
+    padding: 10px;
+    position: relative;
+    background-color: var(--blue-color);
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+    width: 220px; /* Adjust the width as needed */
+    height: 50px;
+  }
 
 #SendMoneyFeedback {
     display: none;

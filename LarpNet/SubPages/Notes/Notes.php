@@ -32,7 +32,7 @@
                     <form action="SaveNote.php" method="post" id="Form">
 
                         <label for="note">New note:</label>
-                        <input type="text" id="note" name="note" required="yes"><br><br>
+                        <input type="text" class="textfield" id="note" name="note" required="yes"><br><br>
 
                         <input type="submit" value="Save" class="button">
                     </form>

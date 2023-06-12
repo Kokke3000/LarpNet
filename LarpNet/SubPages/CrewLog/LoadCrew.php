@@ -69,7 +69,7 @@ if (isset($_SESSION['SelectedCrew'])) {
             echo "<p id='notice'>Notice: some information has been restricted due to user privacy</p>";
 
             echo '<form action="UnSelect.php" method="POST">';
-            echo "<input type='submit' value='Back'>";
+            echo "<input class='CrewMemberBtn' type='submit' value='Back to crew list'>";
             echo "</form>";
         }
     }
@@ -85,7 +85,7 @@ if (isset($_SESSION['SelectedCrew'])) {
         while ($row = mysqli_fetch_assoc($result)) {
             $name = $row['InGameName'];
             echo '<form action="SelectCrew.php" method="POST">';
-            echo "<input type='submit' id='Name' name='Name' value=\"$name\">";
+            echo "<input class='CrewMemberBtn' type='submit' id='Name' name='Name' value=\"$name\">";
             echo "</form>";
 
         }

@@ -21,8 +21,6 @@
 
     <body>
         <div id="center">
-            
-            <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Back"></button>
             <h1 id="Title">Personal info</h1>
 
             <div id="ImageContainer">
@@ -39,6 +37,8 @@
                 <h2>Description: </h2>
                 <p id="Description"></p>
             </div>
+
+            <input type="button" class="button" onclick="window.location.href='../../MainPage/main.php';" value="Back"></button>
         </div>
     </body>
 

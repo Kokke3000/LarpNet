@@ -3,27 +3,29 @@
     font-family: eli;
   }
 
-#center {
+  #center {
     text-align: left;
     position: relative;
     top: 20%;
     height: auto;
     width: auto;
     color:  white;
+    font-family: 'Trebuchet MS';
   }
 
   body {
     font-family: 'Trebuchet MS';
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-     background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    background: linear-gradient(135deg, #7314aa, #000000);
     overflow: hidden;
     color: white;
   }
   
-  #Title {
+#Title {
     font-family: eli;
     text-decoration: underline;
     text-underline-offset: 10px;
@@ -46,20 +48,35 @@
     padding: 20px;
     width: 500px;
     height: auto;
-    max-height: 500px;
+    max-height: 300px;
     overflow-y: scroll;
 } 
 
+:root {
+  --yellow-color: #fcee09; 
+  --red-color: #ff003c;
+  --black-color: #050a0e;
+  --blue-color: #00f0ff;
+}
+
 .button {
-    font-family: 'Trebuchet MS';
-    background-color: #45A29E; /* Green */
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  padding: 10px;
+  position: relative;
+  background-color: var(--blue-color);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  width: 220px;
+  height: 50px;
+}
+
+.textfield {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
 }

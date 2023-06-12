@@ -24,7 +24,6 @@
         <div id="center">
 
             <div id="main">
-                <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Back" class="button"></button>
                 <h1 id="Title">Inter Galactic Bank</h1> 
 
                 <div id="CreditsContainer">
@@ -57,6 +56,8 @@
                     <p id="SendMoneyFeedback"><p>
                     </div>
                 </div>
+
+                <input type="button" onclick="window.location.href='../../MainPage/main.php';" value="Back" class="button"></button>
             </div>
         </div>
     </body>
